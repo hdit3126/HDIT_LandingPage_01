@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HDIT_LandingPage_01/static/css/main.3dc114a5.css",
-    "main.js": "/HDIT_LandingPage_01/static/js/main.4216ce46.js",
+    "main.js": "/HDIT_LandingPage_01/static/js/main.b658f119.js",
     "static/media/main_1.png": "/HDIT_LandingPage_01/static/media/main_1.15c4d27b730f21f02768.png",
     "static/media/graph.png": "/HDIT_LandingPage_01/static/media/graph.d111080ee31b70512827.png",
     "static/media/main_last.jpg": "/HDIT_LandingPage_01/static/media/main_last.77501a744558c04b2d68.jpg",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.3dc114a5.css",
-    "static/js/main.4216ce46.js"
+    "static/js/main.b658f119.js"
   ]
 }
