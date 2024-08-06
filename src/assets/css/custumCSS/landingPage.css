@@ -1,0 +1,143 @@
+/* 최하단 표 */
+
+/* 전체 래퍼 스타일 */
+.last_wrapper {
+    position: relative; /* 절대 위치를 사용할 수 있도록 설정 */
+    height: 100%; /* 높이를 100%로 설정 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+}
+
+/* 이미지 스타일 */
+.main_last {
+    width: 100%; /* 이미지가 래퍼의 너비를 꽉 채우도록 설정 */
+    opacity: 0.2;
+    filter: blur(1px); /* 원하는 흐림 정도를 조절합니다. */
+}
+
+.last_performance {
+    position: absolute; /* 절대 위치로 설정 */
+    top: 45%; /* 상단에서 50% 위치 */
+    left: 50%; /* 왼쪽에서 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 오프셋 조정 */
+    width: 50%; /* 필요에 따라 너비 설정 */
+    height: 70%;
+    box-sizing: border-box; /* 패딩을 포함한 너비 계산 */
+    color: #fff; /* 텍스트 색상 */
+}
+
+/* last_graph_name과 last_graph_wrapper 위아래 배치 */
+.last_graph_name {
+    height: 12%;
+    border-bottom: 3px solid #fff;
+}
+
+.last_blank {
+    height: 4%;
+}
+
+.last_graph_wrapper {
+    height: 84%;
+    overflow: hidden;
+}
+
+/* 스크롤할 배경 이미지 컨테이너 설정 */
+.last_graph_data {
+    height: 223%; /* 전체 높이 설정 */
+    overflow: hidden; /* 컨테이너 밖으로 넘치는 부분 숨기기 */
+    position: relative;
+}
+
+/* 스크롤 이미지 컨테이너 설정 */
+.scrolling-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* 두 배 높이 설정 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 스크롤 이미지 설정 */
+.scrolling-image {
+    width: 100%;
+    height: 50%; /* 각 이미지의 높이 설정 */
+    background: url('assets/img/main/graph.png') no-repeat;
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    background-position: center center; /* 중앙 정렬 */
+}
+
+/* 배경 스크롤 애니메이션 (위로 이동) */
+@keyframes scrollBackground {
+    0% {
+        transform: translateY(0); /* 초기 위치 */
+    }
+    100% {
+        transform: translateY(-50%); /* 이미지 높이의 100%만큼 스크롤 */
+    }
+}
+
+/* 애니메이션 적용 */
+.scrolling-container {
+    animation: scrollBackground 30s linear infinite; /* 애니메이션 적용 */
+}
+
+/* last_graph_row_name 내의 요소들을 옆으로 배치 */
+.last_graph_row_name {
+    display: flex;
+    justify-content: space-between; /* 두 요소를 양 끝으로 배치 */
+    background-color: #0b7bc3;
+    height: 6%;
+    border-bottom: 1px solid #fff;
+}
+
+.last_pro_name,
+.last_region {
+    flex: 1; /* 두 요소가 균등하게 배치되도록 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.last_pro_name {
+    border-right: 1px solid #fff;
+}
+
+.last_region {
+    border-left: 1px solid #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+.last_graph_name span {
+    font-family: "Noto Sans KR", "sans-serif";
+    font-size: 2.4vw; /* 화면 너비의 4%에 해당하는 폰트 크기 */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 효과 추가 */
+}
+
+.last_pro_name,
+.last_region {
+    font-family: "Noto Sans KR", "sans-serif";
+    font-size: 1.1vw; /* 화면 너비의 3%에 해당하는 폰트 크기 */
+    font-weight: 600;
+}
+
+/* 마우스 오버 시 애니메이션 일시 정지 */
+.last_graph_data.paused .scrolling-container {
+    animation-play-state: paused; /* 애니메이션 정지 */
+    cursor: pointer;
+}
+
+.first-div{
+    position: relative;
+}
+.text-div {
+    font-family: "Noto Sans KR", "sans-serif";
+    color: #666666;
+    font-weight: bold;
+    position: absolute;
+    z-index: 10;
+    top: 16%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.7vw;
+}

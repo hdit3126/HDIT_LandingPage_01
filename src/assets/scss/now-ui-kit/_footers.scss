@@ -1,0 +1,77 @@
+.footer {
+    padding: 12px 0;
+    
+    &.footer-default {
+        background-color: #3e3a39;
+    }
+    display: block;
+    nav {
+        display: flex;
+        float: left;
+        opacity: 0.8;
+        width: 60%;
+        padding-left: 5%;
+        ul {
+            padding: 0;
+            list-style: none;
+            display: flex; // 가로로 나열되도록 설정
+
+            li, .nav-link { // li와 NavLink를 가로로 나열
+                display: grid;
+                margin: 0; /* 기본 여백 제거 */
+                // 이미지에 대한 스타일을 설정
+                .logo-img {
+                    height: auto; // 필요에 따라 크기 조정
+                    margin-right: 0.7%; // 다른 항목들과 간격 조정
+                }
+            }
+            li {
+                margin-top: 2%;
+            }
+        }
+    }
+    span {
+        font-family: "Noto Sans KR", "sans-serif";
+        font-size: 0.7vw; /* 화면 너비의 %에 해당하는 폰트 크기 */
+        margin: 0; /* 기본 여백 제거 */
+        padding: 0; /* 기본 패딩 제거 */
+        line-height: 0.9; /* 라인 높이를 줄여서 세로 간격 조절 */
+        margin-top: 10px;
+    }
+    
+    .footer-right {
+        width: 40%;
+        margin-left: auto; /* 오른쪽으로 밀어내기 */
+        color: white;
+        display: -webkit-inline-box;
+        padding-left: 1%;
+        .footer-right-first {
+            padding-top: 5%;
+            width: 40%;
+            .footer-inquiry{
+                margin-right: 2%;
+                font-size: 1.5vw;
+                opacity: 0.7;
+            }
+            .footer-phone {
+                margin-right: 2%;
+                font-size: 1.5vw;
+                font-weight: bold;
+            }
+        }
+        .footer-right-btns{
+            padding-top: 2%;
+            width: 50%;
+            img {
+                margin: 3%;
+                width: 15%;
+            }
+        }
+    }
+    &:after {
+        display: table;
+        clear: both;
+        content: " ";
+    }
+    
+}

@@ -1,0 +1,126 @@
+/* navbar */
+/* 투명한 회색 배경색 */
+.navbar-transparent {
+    background-color: rgba(128, 128, 128, 0.5); /* 약간 투명한 회색 */
+  }
+.navbar-translate {
+    width: 12%;
+    margin-left: 10%;
+}
+/* 불투명한 회색 배경색 */
+.navbar-solid {
+    background-color: rgba(128, 128, 128, 0.8); /* 덜 투명한 회색 */
+}
+
+/* 나머지 스타일 조정 */
+.navbar-toggler-bar {
+    background-color: #ffffff; /* 햄버거 메뉴 바의 색상 설정 (예: 흰색) */
+}
+
+/* styles.css */
+
+/* 기본 로고 스타일 */
+.logo-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+} 
+  
+/* 화면 너비가 430px보다 작을 때 로고 크기 조정 */
+@media (max-width: 430px) {
+    .logo-img {
+        width: 70px; /* 로고 너비를 80px로 설정 */
+    }
+}
+  
+/* 화면 너비가 430px보다 작을 때 로고 크기 조정 */
+@media (max-width: 350px) {
+    .logo-img {
+        width: 60px; /* 로고 너비를 80px로 설정 */
+        position: relative; /* 위치 조정을 위해 상대 위치 설정 */
+        top: -10px; /* 상단으로 이동 */
+        left: -10px; /* 왼쪽으로 이동 */
+    }
+}
+  
+
+/* 모달 */
+.custom-modal {
+    top: 20%;
+}
+/* 기본 모달 스타일 */
+.custom-modal .modal-dialog {
+    max-width: 80%; /* 기본 폭 */
+    width: 80%; /* 기본 폭 */
+  }
+  
+.custom-modal .modal-content {
+    height: auto; /* 기본 높이 */
+    border-radius: 25px; /* 모서리를 둥글게 */
+    border: none; /* 테두리 삭제 */
+    background-color: rgba(0, 0, 0, 0); /* 배경 투명 */
+}
+  
+.custom-modal .modal-body {
+    aspect-ratio: 2709 / 1459; /* 이미지 비율 유지 */
+    background-image: url('../../img/main/popup.png');
+    background-size: contain; /* 이미지를 컨테이너 크기에 맞춤 */
+    background-position: center; /* 이미지를 가운데에 위치 */
+    background-repeat: no-repeat; /* 이미지를 반복하지 않음 */
+    border-radius: 15px; /* 이미지를 둥글게 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none; /* 테두리 삭제 */
+}
+
+/* 확인 클릭시 모달 종료 */
+.clickable-area {
+    position: absolute;
+    /* background-color: red; */
+    top: 75%; /* 위치 조정 */
+    right: 37%; /* 위치 조정 */
+    width: 26%; /* 영역 크기 */
+    height: 15%; /* 영역 크기 */
+    cursor: pointer;
+}
+/* 화면 크기가 576px 이하일 때 */
+@media (max-width: 576px) {
+    .custom-modal .modal-dialog {
+        max-width: 95%; /* 작은 화면에서 더 큰 폭 */
+        width: 95%; /* 작은 화면에서 더 큰 폭 */
+    }
+
+    .custom-modal .modal-content {
+        height: auto; /* 작은 화면에서 더 작은 높이 */
+        border-radius: 25px; /* 모서리를 둥글게 */
+        border: none; /* 작은 화면에서도 테두리 삭제 */
+        background-color: rgb(0, 0, 0); /* 배경 투명 */
+    }
+}
+
+/* 화면 너비가 520px 이하일 때의 스타일 */
+@media (max-width: 520px) {
+    .clickable-area {
+        top: 74%; /* 위치 조정 */
+        right: 37%; /* 위치 조정 */
+        width: 26%; /* 영역 크기 조정 */
+        height: 16%; /* 영역 크기 조정 */
+    }
+}
+.main_last{
+    opacity: 0.3;
+}
+.image-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .image-container img, .last_wrapper {
+    width: 100%;
+    height: auto;
+    z-index: 1; /* 이미지를 다른 배경 이미지 위에 배치 */
+  }
+  
