@@ -13,7 +13,7 @@ import LandingPage from "views/examples/LandingPage.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/service09" element={<LandingPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
