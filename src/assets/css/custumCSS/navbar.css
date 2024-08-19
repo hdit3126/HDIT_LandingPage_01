@@ -27,14 +27,29 @@
 } 
   
 /* 화면 너비가 430px보다 작을 때 로고 크기 조정 */
+@media (max-width: 768px) {
+    .navbar-translate{
+        margin: 0;
+    }
+    .logo-img {
+        width: 80px; /* 로고 너비를 80px로 설정 */
+    }
+}
+/* 화면 너비가 430px보다 작을 때 로고 크기 조정 */
 @media (max-width: 430px) {
+    .navbar-translate{
+        margin: 0;
+    }
     .logo-img {
         width: 70px; /* 로고 너비를 80px로 설정 */
     }
 }
   
-/* 화면 너비가 430px보다 작을 때 로고 크기 조정 */
+/* 화면 너비가 350px보다 작을 때 로고 크기 조정 */
 @media (max-width: 350px) {
+    .navbar-translate{
+        margin: 0;
+    }
     .logo-img {
         width: 60px; /* 로고 너비를 80px로 설정 */
         position: relative; /* 위치 조정을 위해 상대 위치 설정 */
